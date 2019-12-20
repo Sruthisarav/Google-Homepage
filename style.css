@@ -1,0 +1,247 @@
+.header {
+    border-bottom: 0.5px #dddddd solid;
+}
+.logo {
+    position: absolute;
+    left: 2%;
+    top: 3%;
+}
+.search {
+    position: absolute;
+    left: 14%;
+    top: 3%
+}
+.search:hover {
+    border-radius: 30px;
+    box-shadow: 2px 2px #dddddd;
+}
+.in input {
+    display: block;
+    border: 0.5px solid #dddddd;
+    border-radius: 30px;
+    background: no-repeat url(images/search.png), no-repeat url(images/mic.png);
+    background-size: 27px 25px, 20px 25px;
+    background-position: 99%, 95%;
+    padding-left: 20px;
+    font-size: 16px;
+}
+#txtbx {
+    width: 610px; 
+    height: 40px; 
+    text-indent: 10px;
+}
+.head-list {
+    padding-left: 12%
+}
+.ul-box {
+    list-style: none;
+    display: flex;
+}
+.blue:hover {
+    color: blue
+}
+.fig {
+    position:relative;
+    margin: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 5.5%
+}
+.bx:hover {
+    border: 0.25px grey solid
+}
+.main {
+    flex: 0 0 auto ;
+    width: 28% ;
+}
+.info {
+    padding-bottom: 3px;
+    padding-top: 3px;
+    line-height: 20px
+}
+.description, .info {
+    font-size: 14px;
+    padding: 3px 0px;
+}
+.available {
+    border: 0.5px rgb(204, 204, 204) solid;
+    font-size: 14px
+}
+.avail {
+    width: 100%;
+    text-align: left
+}
+#black {
+    color: black
+}
+#viki {
+    padding: 1.5%;
+}
+.title {
+    font-size: 19px
+}
+.link {
+    font-size: 16px;
+    padding: 3px 0px;
+}
+#green {
+    color : darkgreen
+}
+.videos {
+    padding: 0;
+}
+#grey {
+    color: rgb(112, 110, 110)
+}
+#vid {
+    border: 0.5px rgb(204, 204, 204) solid;
+    border-radius: 12px;
+    position:relative;
+    margin: 5px;
+    width: 220px;
+    height: 300px;
+}
+#center {
+    text-align: center;
+}
+.date, .author {
+    position: absolute;
+    left: 0;
+    padding: 10px
+}
+.author {
+    bottom:15px;
+    font-size: 13px;
+}
+.date {
+    bottom:0;
+    font-size: 12px;
+}
+.web-searches {
+    position:relative;
+    padding: 0;
+}
+.column {
+    list-style: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0
+}
+.aside-2 {
+    padding-top: 50px;
+    padding-left: 20px;
+    flex-flow: column wrap;
+    flex-grow: 1;
+    height: 100%;
+    color: black;
+    width: 20%
+}
+#top-img {
+    padding: 0
+}
+.side {
+    margin: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+}
+.aside-1 {
+    background: white;
+    width: 1%
+}
+#bottom {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#lst {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+    padding: 0;
+    padding-left: 27.6%
+}
+#space {
+    font-size: 15px;
+    padding-left: 9.75px;
+}
+h3 {
+    color: black;
+    font-weight: normal
+}
+a:link {
+    color: rgb(11, 11, 192);
+}
+a:visited {
+    color: purple;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+form {
+    float: left
+}
+form:hover {
+    border: 0.5px grey solid
+}
+h1 {
+    margin: 0;
+    font-weight: normal;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+table, th, td {
+    border: 0.5px solid #dddddd;
+    border-collapse: collapse;
+    padding-left: 10px;
+    padding: 10px;
+}
+body {
+    font-family: 'Roboto', arial, sans-serif;
+    color: rgb(92, 91, 91);
+}
+figure {
+    text-align: left
+}
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+/* We tell all items to be 100% width, via flex-basis */
+.wrapper > * {
+    flex: 1 100%;
+}
+/* We rely on source order for mobile-first approach
+ * in this case:
+ * 1. header
+ * 2. article
+ * 3. aside 1
+ * 4. aside 2
+ * 5. footer
+ */
+/* Medium screens */
+@media all and (min-width: 600px) {
+    /* We tell both sidebars to share a row */
+    .aside { flex: 1 0 auto; }
+}
+/* Large screens */
+@media all and (min-width: 800px) {
+    /* We invert order of first sidebar and main
+    * And tell the main element to take twice as much width as the other two sidebars 
+    */
+    .main { flex: 2 2 auto;}
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+}

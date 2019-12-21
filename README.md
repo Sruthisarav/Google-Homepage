@@ -1,3 +1,3 @@
-# google-homepage
+# Google Homepage
 
-link: https://sruthisarav.github.io/google-homepage/
+link: https://sruthisarav.github.io/Google-Homepage/
